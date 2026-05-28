@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexis Premium Mega Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Nexis<span class="highlight">MegaMarket</span></div>
+            <div class="search-bar">
+                <input type="text" id="global-search" placeholder="Type a product name to search or bargain...">
+                <button type="button" id="search-btn">Bargain Bot</button>
+            </div>
+            <div class="nav-actions">
+                <span class="nav-btn"><span id="cart-icon">🛒</span> Cart (<span id="cart-count">0</span>)</span>
+                <span class="nav-btn" id="account-toggle">👤 Account</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="marketplace-container">
+        
+        <section class="product-gallery-section">
+            <div class="breadcrumbs">Electronics &gt; Dynamic Showcase &gt; <span id="crumb-name">Smart Television</span></div>
+            
+            <div class="product-showcase">
+                <div class="main-image-container">
+                    <span class="badge" id="display-badge">OFFICIAL STORE</span>
+                    <img id="main-prod-img" src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=500" alt="Product Image">
+                </div>
+            </div>
+
+            <div class="product-info-details">
+                <h2 id="display-title">Nexis Ultra 65-Inch 4K Smart TV</h2>
+                <div class="rating-stars">★★★★★ <span>(284 verified buyer reviews)</span></div>
+                <hr class="divider">
+                <div class="pricing-tier">
+                    <span class="curr-price" id="display-price">$799.99</span>
+                    <span class="discount-tag" id="display-discount">Active Matrix Stock</span>
+                </div>
+                <p class="shipping-notice">✓ Free express delivery directly to your doorstep</p>
+            </div>
+        </section>
+
+        <aside class="negotiation-sidebar">
+            <div class="agent-header">
+                <div class="agent-avatar">🤖</div>
+                <div class="agent-status">
+                    <h4>Smart Bargain Assistant</h4>
+                    <p><span class="status-dot"></span> Online • Authorized Store Agent</p>
+                </div>
+            </div>
+
+            <div class="chat-viewport" id="chat-box">
+                <div class="chat-bubble bot">
+                    Welcome to our negotiation system! I manage offers for our premium store inventory.
+                </div>
+                <div class="chat-bubble bot">
+                    Type any product name (e.g., <strong>Watch, Telephone, Laptop, Desktop, Charger, 65 TV, 55 TV, or 32 TV</strong>) to view it and pitch your custom budget offer!
+                </div>
+            </div>
+
+            <div class="chat-control-dock">
+                <div class="input-wrapper">
+                    <input type="text" id="user-offer-input" placeholder="Type a product name or send an offer...">
+                </div>
+                <button type="button" class="submit-deal-btn" id="submit-offer-btn">Send to Agent</button>
+            </div>
+        </aside>
+    </main>
+
+    <div class="modal-overlay" id="register-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Create Secure Account</h3>
+                <span class="close-modal" id="close-modal-btn">&times;</span>
+            </div>
+            <form id="register-form" onsubmit="event.preventDefault(); handleRegistration();">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="auth-btn">Register Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

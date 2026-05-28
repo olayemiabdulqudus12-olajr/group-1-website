@@ -1,0 +1,436 @@
+/* Base Style Foundations */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121418; 
+    color: #f8f9fa;
+    overflow-x: hidden;
+}
+
+/* Navigation Architecture Layout */
+.navbar {
+    background-color: #0b0c10;
+    padding: 14px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #dc3545;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+.logo .highlight {
+    color: #ff4757;
+}
+
+.search-bar {
+    flex: 0 1 550px;
+    display: flex;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #2f3542;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+    font-size: 14px;
+    background: #1e222b;
+    color: #ffffff;
+}
+
+.search-bar button {
+    background-color: #ff4757;
+    border: none;
+    color: white;
+    padding: 0 22px;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 25px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.nav-btn {
+    cursor: pointer;
+    transition: color 0.2s;
+    user-select: none;
+}
+
+.nav-btn:hover {
+    color: #ff4757;
+}
+
+/* Marketplace Split-Column Grid */
+.marketplace-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 25px;
+}
+
+/* Left Showcase Panel Styling */
+.product-gallery-section {
+    background: linear-gradient(145deg, #1c1114, #121418); 
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid #2d181c;
+}
+
+.breadcrumbs {
+    font-size: 13px;
+    color: #a4b0be;
+    margin-bottom: 25px;
+}
+
+.product-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.main-image-container {
+    width: 100%;
+    max-width: 450px;
+    height: 350px;
+    position: relative;
+    border: 1px solid #2f3542;
+    border-radius: 8px;
+    background: #1e222b; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+#main-prod-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ff4757;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+/* Product Info Properties */
+.product-info-details h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.rating-stars {
+    color: #ffa502;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #2d181c;
+    margin-bottom: 20px;
+}
+
+.pricing-tier {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 12px;
+}
+
+.curr-price {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.discount-tag {
+    background: rgba(255, 71, 87, 0.15);
+    color: #ff4757;
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 71, 87, 0.3);
+}
+
+.shipping-notice {
+    font-size: 14px;
+    color: #2ed573;
+    font-weight: 600;
+}
+
+/* Right Sidebar Assistant Panel */
+.negotiation-sidebar {
+    background: #1c1e24;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    height: 570px;
+    border: 1px solid #2f3542;
+}
+
+.agent-header {
+    background: #14161d;
+    padding: 18px;
+    border-bottom: 1px solid #2f3542;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+}
+
+.agent-avatar {
+    font-size: 24px;
+}
+
+.agent-status h4 {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.agent-status p {
+    font-size: 12px;
+    color: #a4b0be;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #2ed573;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+/* Chat History Display Box */
+.chat-viewport {
+    flex-grow: 1;
+    padding: 20px;
+    background: #17191f; 
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.chat-bubble {
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 85%;
+    word-wrap: break-word;
+}
+
+.chat-bubble.bot {
+    background: #2f3542;
+    color: #f8f9fa;
+    align-self: flex-start;
+    border-top-left-radius: 0;
+    border: 1px solid #57606f;
+}
+
+.chat-bubble.user {
+    background: #ff4757; 
+    color: white;
+    align-self: flex-end;
+    border-top-right-radius: 0;
+}
+
+/* Control Dock Area */
+.chat-control-dock {
+    padding: 18px;
+    background: #1c1e24;
+    border-top: 1px solid #2f3542;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #2f3542;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    background: #121418;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.input-wrapper input:focus {
+    border-color: #ff4757;
+}
+
+.submit-deal-btn {
+    width: 100%;
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.2s;
+}
+
+.submit-deal-btn:hover {
+    background-color: #ff6b81;
+}
+
+/* Account Registration Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-card {
+    background: #1c1e24;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #2f3542;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-card {
+    transform: translateY(0);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #2f3542;
+    padding-bottom: 10px;
+}
+
+.modal-header h3 {
+    color: #ffffff;
+}
+
+.close-modal {
+    font-size: 28px;
+    color: #a4b0be;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: #ff4757;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: #a4b0be;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    background: #121418;
+    border: 1px solid #2f3542;
+    border-radius: 6px;
+    color: white;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #ff4757;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    background: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.auth-btn:hover {
+    background-color: #ff6b81;
+}
+
+@media(max-width: 900px) {
+    .marketplace-container {
+        grid-template-columns: 1fr;
+    }
+}
